@@ -9,8 +9,8 @@ The simple application about sell products with features such as add to cart, in
 
 # App images
 
-![App Dashboard](src/assets/app-images/dashboard.png)
-![App Cart](src/assets/app-images/cart.png)
+![App Dashboard](./src/assets/app-images/dashboard.png)
+![App Cart](./src/assets/app-images//cart.png)
 
 ## Development server
 
