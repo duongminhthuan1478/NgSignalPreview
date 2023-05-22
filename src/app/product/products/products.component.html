@@ -1,0 +1,41 @@
+<h4 style="width: 130px">Non-Signal</h4>
+ <div class="product-table">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Product Name</th>
+                <th scope="col">Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{ product.title }}</td>
+                <td>{{ product.price }}</td>
+                <td>
+                    <i class="fa icon" (click)="viewDetail(product)">
+                        &#xf06e;
+                    </i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="product-detail" *ngIf="product">
+    <div class="d-flex gap-5">
+        <h2 class="m-0">{{ product.title }} </h2>
+        <button
+            class="btn-add-cart"
+            (click)="addToCart(product)">
+            <i class="fa"> &#xf07a;</i> Add to cart
+        </button>
+    </div>
+    <div>
+        <span>Price: &nbsp;</span>
+        <span class="text-price">{{product.price | currency}}</span>
+    </div>
+    <div>Brand: {{ product.brand }}</div>
+    <p class="my-3">{{ product.description }}</p>
+    <img [src]="product.thumbnail" [alt]="product.title">
+</div>

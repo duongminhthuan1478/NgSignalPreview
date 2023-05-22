@@ -1,0 +1,39 @@
+.main-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  align-items: center;
+  background-color: rgb(33, 37, 41);
+  color: white;
+}
+
+.main-menu li {
+  cursor: pointer;
+  padding: 5px;
+  position: relative;
+}
+
+.main-menu a {
+  color: white;
+  font-size: 0;
+  line-height: 16px;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.main-menu li i {
+  margin-right: 5px;
+}
+
+.main-menu li span {
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.main-menu li i img {
+  height: 20px;
+  width: auto;
+  object-fit: cover;
+  vertical-align: middle;
+}

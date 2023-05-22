@@ -1,0 +1,52 @@
+:host {
+  display: flex;
+  padding: 30px;
+  gap: 80px;
+
+  .icon {
+    font-size: 24px;
+    cursor: pointer;
+
+    &:hover {
+      color: #646669;
+    }
+  }
+
+  .product-table {
+    width: 35%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+  .product-detail {
+    flex: 1;
+    padding: 15px;
+
+    .btn-add-cart {
+      background-color: #333333;
+      color: #e6e6e6;
+      border: none;
+      padding: 8px 16px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+      text-transform: uppercase;
+      border: 2px solid black;
+
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+
+    .text-price {
+      font-size: 15px;
+      color: red;
+    }
+
+    img {
+      height: 150px;
+    }
+  }
+}

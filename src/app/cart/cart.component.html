@@ -1,0 +1,37 @@
+<h3>Your cart</h3>
+<table class="table" *ngIf="cartItems().length">
+  <thead>
+    <tr>
+      <th scope="col">Product</th>
+      <th scope="col">Price</th>
+      <th scope="col">Amount</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of cartItems()">
+      <td>{{ item.title }}</td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.amount }}</td>
+      <th>
+        <div class="d-flex gap-2">
+          <button type="button" class="btn btn-primary"
+            (click)="increment(item)">+
+          </button>
+          <button type="button" class="btn btn-danger ml-3"
+            (click)="decrement(item)">-
+          </button>
+        </div>
+      </th>
+    </tr>
+  </tbody>
+</table>
+
+<p *ngIf="!cartItems().length">
+  No item founds, please add one for checkout
+</p>
+
+<div>
+  <span>Total price: </span>
+  <span>{{ totalPrice()}}</span>
+</div>
